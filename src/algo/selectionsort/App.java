@@ -1,5 +1,12 @@
 package algo.selectionsort;
 
+/*
+    Main() creates an unsorted array which is passed to the selectionSort method.
+    selectionSort sorts the array and returns it to main() where it is assigned to
+    the variable 'myArray'.  myArray is then passed to the displayArray method
+    to output the array for the user.  selectionSort has an O(n^2) complexity making
+    it easy to code up and understand, but inefficient.
+ */
 public class App {
 
     public static void main(String[] args) {
@@ -8,20 +15,6 @@ public class App {
         displayArray(myArray);
     }
 
-/*
-    public static int[] selectionSort(int arr[]) {
-        int [] sorted = arr;
-        for (int i = 0; i < sorted.length - 1; i++) {
-            int minimum = sorted[i];
-            for (int j = (i + 1); j < sorted.length - 1; j++) {
-                if (sorted[j] < sorted[minimum])
-                    minimum = sorted[j];
-                sorted[i] = sorted[minimum];
-            }
-        }
-        return sorted;
-    }
-*/
     public static int[] selectionSort(int arr[]) {
         for (int arrIndex = 0; arrIndex < arr.length; arrIndex++) {
             int minimum = arrIndex;
