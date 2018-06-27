@@ -8,8 +8,32 @@ public class App {
         displayArray(myArray);
     }
 
-
+/*
     public static int[] selectionSort(int arr[]) {
+        int [] sorted = arr;
+        for (int i = 0; i < sorted.length - 1; i++) {
+            int minimum = sorted[i];
+            for (int j = (i + 1); j < sorted.length - 1; j++) {
+                if (sorted[j] < sorted[minimum])
+                    minimum = sorted[j];
+                sorted[i] = sorted[minimum];
+            }
+        }
+        return sorted;
+    }
+*/
+    public static int[] selectionSort(int arr[]) {
+        for (int arrIndex = 0; arrIndex < arr.length; arrIndex++) {
+            int minimum = arrIndex;
+            for (int nextIndex = (arrIndex + 1); nextIndex < arr.length; nextIndex++) {
+                if (arr[nextIndex] < arr[minimum]) {
+                    minimum = nextIndex;
+                }
+            }
+            int temp = arr[arrIndex];
+            arr[arrIndex] = arr[minimum];
+            arr[minimum] = temp;
+        }
         return arr;
     }
 
