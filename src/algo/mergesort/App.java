@@ -2,7 +2,8 @@ package algo.mergesort;
 
 public class App {
     public static void main(String[] args) {
-
+        int[] myArray = mergeSort(new int[] {7, 9, 3, 5, 11, 1, 4});
+        displayArray(myArray);
     }
 
     public static int[] mergeSort(int[] arr) {
