@@ -1,5 +1,10 @@
 package algo.insertionsort;
 
+/*
+    Insertion sort divides the array into two parts: sorted and unsorted.  The initial
+    for loop iterates through the array and uses a nested while loop to "insert" the
+    next unsorted element into its position in the sorted partition.
+ */
 public class App {
     public static void main(String[] args) {
         int[] myArray = insertionSort(new int[] {7, 9, 3, 5, 11, 1, 4});
